@@ -9,12 +9,23 @@ navItems.forEach(i => {
 const container = document.querySelector('.container.home');
 const letsGoImg = document.querySelector('.letsGo');
 const adventureImg = document.querySelector('.adventureImg');
+const buttons = document.querySelectorAll('.btn');
+
+
+
+// Image Click Event
+letsGoImg.addEventListener('click', e => {
+  console.log('click')
+  e.target.setAttribute('src', 'img/adventure.jpg');
+})
 
 
 // Random container event listener
 container.style.opacity = '1';
 container.style.transition = '2s';
 
-container.addEventListener('load', e => {
+container.addEventListener('loadend', e => {
   e.target.style.opacity = '0';
 })
+
+// Button click event
