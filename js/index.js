@@ -29,3 +29,18 @@ container.addEventListener('loadend', e => {
 })
 
 // Button click event
+buttons.forEach(button => {
+  button.addEventListener('click', e => {
+    alert(`Don't Click Me!`);
+  });
+});
+
+buttons.forEach(button => {
+  button.addEventListener('click', e => {
+    if (e.target.style.color !== '#fff') {
+      e.target.style.color = 'crimson';
+    } else {
+      e.target.style.color.toggle = 'white';
+    }
+  });
+});
