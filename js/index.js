@@ -10,6 +10,7 @@ const container = document.querySelector('.container.home');
 const letsGoImg = document.querySelector('.letsGo');
 const adventureImg = document.querySelector('.adventureImg');
 const buttons = document.querySelectorAll('.btn');
+const sound = document.querySelector('audio');
 
 
 
@@ -33,6 +34,10 @@ container.addEventListener('loadend', e => {
 
 // Button click event
 buttons.forEach(button => {
+  button.addEventListener('click', playSound);
+});
+
+buttons.forEach(button => {
   button.addEventListener('click', e => {
     alert(`Don't Click Me!`);
   });
@@ -47,3 +52,12 @@ buttons.forEach(button => {
     }
   });
 });
+
+// window.addEventListener('click', playSound);
+
+
+
+function playSound(e) {
+  sound.currentTime = 0;
+  sound.play();
+}
