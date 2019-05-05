@@ -14,8 +14,11 @@ const buttons = document.querySelectorAll('.btn');
 
 
 // Image Click Event
-letsGoImg.addEventListener('click', e => {
-  console.log('click')
+letsGoImg.addEventListener('mouseover', e => {
+  e.target.setAttribute('src', 'img/fun.jpg');
+})
+
+adventureImg.addEventListener('mouseover', e => {
   e.target.setAttribute('src', 'img/adventure.jpg');
 })
 
