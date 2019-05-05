@@ -9,12 +9,13 @@ navItems.forEach(i => {
 const container = document.querySelector('.container.home');
 const letsGoImg = document.querySelector('.letsGo');
 const adventureImg = document.querySelector('.adventureImg');
+const headerImg = document.querySelector('.headerImg');
 const buttons = document.querySelectorAll('.btn');
 const sound = document.querySelector('audio');
 
 
 
-// Image Click Event
+// Image mouse Event
 letsGoImg.addEventListener('mouseover', e => {
   e.target.setAttribute('src', 'img/fun.jpg');
 })
@@ -23,13 +24,17 @@ adventureImg.addEventListener('mouseover', e => {
   e.target.setAttribute('src', 'img/adventure.jpg');
 })
 
+// Header Image Mouse over event
+headerImg.addEventListener('mouseover', e => {
+  e.target.style.transform = 'scale(1.1)';
+})
 
 // Random container event listener
 container.style.opacity = '1';
 container.style.transition = '2s';
 
-container.addEventListener('loadend', e => {
-  e.target.style.opacity = '0';
+container.addEventListener('load', e => {
+  e.style.opacity = '1';
 })
 
 // Button click event
