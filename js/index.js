@@ -69,3 +69,20 @@ function playSound(e) {
 window.addEventListener('devicelight', (e) => {
   console.log('hello');
 });
+
+const randomColor = () => {
+  const char = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += char[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+const paragraphs = document.querySelectorAll('p');
+
+paragraphs.forEach((paragraph) => {
+  paragraph.addEventListener('click', () => {
+    paragraph.style.color = randomColor();
+  });
+});
