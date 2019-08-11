@@ -32,11 +32,9 @@ headerImg.addEventListener('mouseout', (e) => {
 });
 
 // Random container event listener
-container.style.opacity = '1';
-container.style.transition = '2s';
-
-container.addEventListener('load', (e) => {
-  e.style.opacity = '1';
+window.addEventListener('load', (e) => {
+  container.style.transition = '2s';
+  container.style.opacity = '1';
 });
 
 // Button click event
