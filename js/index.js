@@ -1,7 +1,7 @@
 // Your code goes here
-const navItems = document.querySelectorAll(".nav-link");
-navItems.forEach(i => {
-  i.addEventListener("click", e => {
+const navItems = document.querySelectorAll('.nav-link');
+navItems.forEach((i) => {
+  i.addEventListener('click', (e) => {
     e.preventDefault();
   });
 });
@@ -13,43 +13,45 @@ const headerImg = document.querySelector('.headerImg');
 const buttons = document.querySelectorAll('.btn');
 const sound = document.querySelector('audio');
 
-
-
 // Image mouse Event
-letsGoImg.addEventListener('mouseover', e => {
+letsGoImg.addEventListener('mouseover', (e) => {
   e.target.setAttribute('src', 'img/fun.jpg');
-})
+});
 
-adventureImg.addEventListener('mouseover', e => {
+adventureImg.addEventListener('mouseover', (e) => {
   e.target.setAttribute('src', 'img/adventure.jpg');
-})
+});
 
 // Header Image Mouse over event
-headerImg.addEventListener('mouseover', e => {
+headerImg.addEventListener('mouseover', (e) => {
   e.target.style.transform = 'scale(1.1)';
-})
+});
+
+headerImg.addEventListener('mouseout', (e) => {
+  e.target.style.transform = 'scale(1)';
+});
 
 // Random container event listener
 container.style.opacity = '1';
 container.style.transition = '2s';
 
-container.addEventListener('load', e => {
+container.addEventListener('load', (e) => {
   e.style.opacity = '1';
-})
+});
 
 // Button click event
-buttons.forEach(button => {
+buttons.forEach((button) => {
   button.addEventListener('click', playSound);
 });
 
-buttons.forEach(button => {
-  button.addEventListener('click', e => {
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
     alert(`Don't Click Me!`);
   });
 });
 
-buttons.forEach(button => {
-  button.addEventListener('click', e => {
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
     if (e.target.style.color !== '#fff') {
       e.target.style.color = 'crimson';
     } else {
@@ -60,9 +62,12 @@ buttons.forEach(button => {
 
 // window.addEventListener('click', playSound);
 
-
-
 function playSound(e) {
   sound.currentTime = 0;
   sound.play();
 }
+
+// Ambient light event listener
+window.addEventListener('devicelight', (e) => {
+  console.log('hello');
+});
