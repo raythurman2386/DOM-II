@@ -71,6 +71,13 @@ function playSound(e) {
 }
 
 // Ambient light event listener
+/* 
+This idea came from https://www.youtube.com/watch?v=EZpdEljk5dY&t=1103s
+Didn't realize the conference was 2 years old and the 'devicelight' event has been 
+deprecated :( 
+
+Leaving in so I can explain the concept I was going to go for.
+*/
 window.addEventListener('devicelight', (e) => {
   console.log('hello');
 });
