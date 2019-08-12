@@ -1,6 +1,20 @@
 const rockets = document.querySelectorAll('.blocks');
 let travel;
 
-rockets.addEventListener('mousedown', addMargin);
+console.log(rockets);
 
-rockets.addEventListener('mouseup', subMargin);
+const addMargin = (e) => {
+  console.log('clicky, clicky');
+};
+
+const subMargin = (e) => {
+  console.log('noclicky, clicky');
+};
+
+rockets.forEach((rocket) => {
+  rocket.addEventListener('mousedown', addMargin);
+});
+
+rockets.forEach((rocket) => {
+  rocket.addEventListener('mouseup', subMargin);
+});
