@@ -8,6 +8,7 @@ const headerImg = document.querySelector('.headerImg');
 const buttons = document.querySelectorAll('.btn');
 const sound = document.querySelector('audio');
 const paragraphs = document.querySelectorAll('p');
+const headings = document.querySelectorAll('h2');
 
 // Event Listeners
 
@@ -99,5 +100,11 @@ const randomColor = () => {
 paragraphs.forEach((paragraph) => {
   paragraph.addEventListener('click', () => {
     paragraph.style.color = randomColor();
+  });
+});
+
+headings.forEach((heading) => {
+  heading.addEventListener('dblclick', () => {
+    heading.style.color = randomColor();
   });
 });
