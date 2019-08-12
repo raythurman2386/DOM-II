@@ -15,6 +15,7 @@ const paragraphs = document.querySelectorAll('p');
 navItems.forEach((i) => {
   i.addEventListener('click', (e) => {
     e.preventDefault();
+    i.style.color = randomColor();
   });
 });
 
@@ -23,8 +24,16 @@ letsGoImg.addEventListener('mouseover', (e) => {
   e.target.setAttribute('src', 'img/fun.jpg');
 });
 
+letsGoImg.addEventListener('mouseout', (e) => {
+  e.target.setAttribute('src', 'img/adventure.jpg');
+});
+
 adventureImg.addEventListener('mouseover', (e) => {
   e.target.setAttribute('src', 'img/adventure.jpg');
+});
+
+adventureImg.addEventListener('mouseout', (e) => {
+  e.target.setAttribute('src', 'img/fun.jpg');
 });
 
 // Header Image Mouse over event
@@ -55,11 +64,7 @@ buttons.forEach((button) => {
 
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => {
-    if (e.target.style.color !== '#fff') {
-      e.target.style.color = 'crimson';
-    } else {
-      e.target.style.color.toggle = 'white';
-    }
+    e.target.style.color = randomColor();
   });
 });
 
