@@ -1,17 +1,22 @@
 // Your code goes here
+// Variables
 const navItems = document.querySelectorAll('.nav-link');
-navItems.forEach((i) => {
-  i.addEventListener('click', (e) => {
-    e.preventDefault();
-  });
-});
-
 const container = document.querySelector('.container.home');
 const letsGoImg = document.querySelector('.letsGo');
 const adventureImg = document.querySelector('.adventureImg');
 const headerImg = document.querySelector('.headerImg');
 const buttons = document.querySelectorAll('.btn');
 const sound = document.querySelector('audio');
+const paragraphs = document.querySelectorAll('p');
+
+// Event Listeners
+
+// Nav event listener
+navItems.forEach((i) => {
+  i.addEventListener('click', (e) => {
+    e.preventDefault();
+  });
+});
 
 // Image mouse Event
 letsGoImg.addEventListener('mouseover', (e) => {
@@ -78,8 +83,6 @@ const randomColor = () => {
   }
   return color;
 };
-
-const paragraphs = document.querySelectorAll('p');
 
 paragraphs.forEach((paragraph) => {
   paragraph.addEventListener('click', () => {
